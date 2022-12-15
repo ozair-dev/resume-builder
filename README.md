@@ -2,23 +2,25 @@
 ----
 
 ### here are some example resumes generated with this app
-
-![1](images/1.png)
-![2](images/2.png)
-![3](images/3.png)
+![1](https://user-images.githubusercontent.com/65649182/207802234-588e8808-ab12-460a-8a86-11711d369f57.png)
+![2](https://user-images.githubusercontent.com/65649182/207802215-9dd40f81-ca16-4f9a-86d9-fa40e6656d79.png)
+![3](https://user-images.githubusercontent.com/65649182/207802209-3a9cfaba-b34d-4aad-9ef9-4b4943f3b7a0.png)
 
 # Usage
 1. In the edit page, you can fill the information and click save. You can also export the information as a JSON file to your own device and can import it again in the app, so you don't have to re-enter all the information.
-   ![import](images/import.png)
-   ![export](images/export.png)
+   ![export](https://user-images.githubusercontent.com/65649182/207802218-50fd7450-9da8-42b6-9615-a8bd0f4a3653.png)
+   ![import](https://user-images.githubusercontent.com/65649182/207802222-356b9eb4-e460-4249-81d8-d9807a086092.png)
 2. After you have saved the information, click the button ```CREATE YOUR RESUME``` and it will take you to the resume template
 3. You can pull down the tools bar which allows you to change theme colors and fonts, you can navigate through resumes by clicking the navigation links. You will find other useful stuff like pdf download button and edit button there.
-![tools](images/tools.png)
+![tools](https://user-images.githubusercontent.com/65649182/207802228-0416d9a7-2412-4543-a2a2-595cc5ea457d.png)
 
 If you find/face any problem in the app, please open an issue and I'll try to fix it.
 If you want a new design to be added in the app, then open an issue and provide the design. If it is good enough, I may create a template for it and add to the app
-#### Note! if you see the headers and footer on the resume while saving it, and want to get rid of them, you have to disable them, go to advance options and disble them. You may see something like this
-![print](images/print.png)
+
+## Troubleshooting
+In most browsers,you will see the headers and footer on the resume while saving it, and want to get rid of them, you have to disable them, go to advance options and disble them. You may see something like this
+![Screenshot from 2022-12-15 12-42-55](https://user-images.githubusercontent.com/65649182/207802669-1e8ba63a-ab37-4baa-86fb-22bc131da0a9.png)
+
 
 
 # Contributing
