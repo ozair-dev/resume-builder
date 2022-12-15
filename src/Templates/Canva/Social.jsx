@@ -26,7 +26,7 @@ const Social = ({ url }) => {
         color="white"
         sx={{ textDecoration: "none" }}
       >
-        {url.replace(/https?:\/\/www[.]/, "")}
+        {url.replace(/https?:\/\/(www[.])?/, "")}
       </Typography>
     </Stack>
   );

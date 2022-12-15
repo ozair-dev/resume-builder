@@ -73,6 +73,7 @@ const Index = () => {
               zIndex="1"
               borderRadius="5vw"
               bgcolor="secondary.dark"
+              overflow="hidden"
             >
               <Heading Icon={BsCodeSlash}>Skills</Heading>
               <Stack spacing={1}>
@@ -118,14 +119,17 @@ const Index = () => {
               </Stack>
               {!!socials.length && (
                 <Stack my={0.5}>
-                  <Typography variant="x-small" color="primary.main">
+                  <Typography
+                    variant="x-small"
+                    color="primary.main"
+                    gutterBottom
+                  >
                     Socials
                   </Typography>
                   <Stack spacing={0.5}>
                     {socials.map((social, i) => (
-                      <Stack key={i} direction="row">
-                        <Typography
-                          component={SocialIcon}
+                      <Stack key={i} direction="row" alignItems="center">
+                        <SocialIcon
                           mr={0.4}
                           url={social}
                           width="3vw"
@@ -137,7 +141,7 @@ const Index = () => {
                           variant="xx-small"
                           color="white"
                         >
-                          {social.replace(/https?:\/\/www[.]/, "")}
+                          {social.replace(/https?:\/\/(www[.])?/, "")}
                         </Typography>
                       </Stack>
                     ))}
@@ -147,8 +151,13 @@ const Index = () => {
             </Box>
           </Box>
         </Stack>
-        <Stack p={2} pl={0} pt={4} width={3 / 5} height={1}>
-          <Typography color="primary" variant="xx-large" fontWeight="bolder">
+        <Stack p={2} pl={0} width={3 / 5} height={1}>
+          <Typography
+            color="primary"
+            variant="xx-large"
+            textAlign="center"
+            fontWeight="bolder"
+          >
             {name}
           </Typography>
           <Typography variant="medium">{role}</Typography>
@@ -167,7 +176,7 @@ const Index = () => {
                 ({ started, ended, present, institute, studyProgram }, i) => (
                   <ChainLink
                     key={i}
-                    date={getDate(started) + "-" + getDate(ended, present)}
+                    date={getYear(started) + "-" + getYear(ended, present)}
                     main={studyProgram}
                     body={institute}
                     isLast={educations.length === i + 1}
@@ -195,7 +204,7 @@ const Index = () => {
                 ) => (
                   <ChainLink
                     key={i}
-                    date={getDate(started) + "-" + getDate(ended, present)}
+                    date={getYear(started) + "-" + getYear(ended, present)}
                     main={title}
                     body={company + ", " + location}
                     list={responsibilities}
@@ -216,7 +225,7 @@ const Index = () => {
                   component="a"
                   sx={{ textDecoration: "none" }}
                   href={link}
-                  date={getDate(finished)}
+                  date={getMonthYear(finished)}
                   main={name}
                   body={description}
                   isLast={projects.length === i + 1}
@@ -233,9 +242,16 @@ const Index = () => {
 
 export default Index;
 
-function getDate(time, present) {
+function getYear(time, present) {
   if (present) return "Present";
 
   time = new Date(time);
   return time.getFullYear();
+}
+
+function getMonthYear(time) {
+  time = new Date(time);
+  return `${time.toLocaleString("en-us", {
+    month: "short",
+  })} ${time.getFullYear()}`;
 }

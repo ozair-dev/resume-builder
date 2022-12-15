@@ -4,9 +4,23 @@ import { Box } from "@mui/material";
 
 import { SocialIcon } from "react-social-icons";
 
-const Icon = ({ url, width, height, ...props }) => {
+const Icon = ({
+  url,
+  network,
+  bgColor,
+  fgColor,
+  label,
+  className,
+  defaultSVG,
+  style,
+  width,
+  height,
+  ...props
+}) => {
+  console.log({ width, height, props });
   return (
     <Box
+      {...props}
       sx={[
         width &&
           height && {
@@ -17,7 +31,18 @@ const Icon = ({ url, width, height, ...props }) => {
           },
       ]}
     >
-      <SocialIcon url={url} {...props} />
+      <SocialIcon
+        {...{
+          url,
+          network,
+          bgColor,
+          fgColor,
+          label,
+          className,
+          defaultSVG,
+          style,
+        }}
+      />
     </Box>
   );
 };
