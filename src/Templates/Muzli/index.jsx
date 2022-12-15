@@ -11,7 +11,7 @@ import Heading from "./Heading";
 import Skill from "./Skill";
 import ChainLink from "./ChainLink";
 
-import { SocialIcon } from "react-social-icons";
+import SocialIcon from "../../SocialIcon";
 
 const Index = () => {
   const {
@@ -128,8 +128,8 @@ const Index = () => {
                           component={SocialIcon}
                           mr={0.4}
                           url={social}
-                          width="3vw !important"
-                          height="3vw !important"
+                          width="3vw"
+                          height="3vw"
                         />
                         <Typography
                           component="a"
