@@ -11,7 +11,7 @@ const InfoContainer = ({ main, body, date, list, ...props }) => {
       <Typography variant="x-small" color="white">
         {body}
       </Typography>
-      {list &&
+      {!!list &&
         list.map((li, i) => (
           <Stack key={i} direction="row" spacing={0.5}>
             <Typography variant="x-small" color="white">

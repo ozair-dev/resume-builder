@@ -42,7 +42,7 @@ const ChainLink = ({ date, main, body, isLast, isSingle, list, ...props }) => {
         <Typography variant="xx-small" color="text.secondary" fontWeight="bold">
           {body}
         </Typography>
-        {list && (
+        {!!list && (
           <Stack>
             {list.map((li, i) => (
               <Stack key={i} direction="row">

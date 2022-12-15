@@ -104,7 +104,7 @@ const Index = () => {
             </>
           )}
 
-          {experiences.length && (
+          {!!experiences.length && (
             <>
               <Heading Icon={IoIosTimer}>Experience</Heading>
               <Stack spacing={0.5}>
