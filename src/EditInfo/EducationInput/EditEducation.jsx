@@ -5,15 +5,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 import Input from "../Input";
 
-const EditEducation = ({
-  control,
-  index,
-  id,
-  watch,
-  setValue,
-  errors,
-  remove,
-}) => {
+const EditEducation = ({ control, index, watch, setValue, errors, remove }) => {
   return (
     <Box
       width={1}
@@ -101,7 +93,7 @@ const EditEducation = ({
       </Box>
 
       <Button
-        onClick={() => remove(id)}
+        onClick={() => remove(index)}
         color="error"
         size="large"
         fullWidth

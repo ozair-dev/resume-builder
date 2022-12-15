@@ -8,7 +8,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 
 import { SocialIcon } from "react-social-icons";
 
-const EditSocial = ({ id, remove, index, watch, control, errors }) => {
+const EditSocial = ({ remove, index, watch, control, errors }) => {
   return (
     <Stack
       direction="row"
@@ -34,7 +34,7 @@ const EditSocial = ({ id, remove, index, watch, control, errors }) => {
       />
 
       <Button
-        onClick={() => remove(id)}
+        onClick={() => remove(index)}
         color="error"
         sx={{ minWidth: "fit-content", fontSize: "large" }}
       >

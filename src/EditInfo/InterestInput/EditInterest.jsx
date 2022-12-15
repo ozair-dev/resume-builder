@@ -6,7 +6,7 @@ import Input from "../Input";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AiOutlineDelete } from "react-icons/ai";
 
-const EditInterest = ({ remove, id, watch, index, control, errors }) => {
+const EditInterest = ({ remove, watch, index, control, errors }) => {
   return (
     <Stack direction="row" spacing={1} width={1}>
       <Input
@@ -37,7 +37,7 @@ const EditInterest = ({ remove, id, watch, index, control, errors }) => {
         fullWidth
       />
       <Button
-        onClick={() => remove(id)}
+        onClick={() => remove(index)}
         color="error"
         sx={{ minWidth: "fit-content", fontSize: "large" }}
       >

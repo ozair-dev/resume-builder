@@ -4,9 +4,9 @@ import Input from "../Input";
 
 import { Box, Button, Slider, Stack, Typography } from "@mui/material";
 
-const EditSkill = ({ remove, id, index, control, setValue, watch, errors }) => {
+const EditSkill = ({ remove, index, control, setValue, watch, errors }) => {
   const removeSkill = () => {
-    remove(id);
+    remove(index);
   };
   return (
     <Box

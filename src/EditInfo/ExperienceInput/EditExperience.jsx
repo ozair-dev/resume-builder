@@ -5,15 +5,7 @@ import Input from "../Input";
 import { Box, TextField, Checkbox, Typography, Button } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
-const AddExperience = ({
-  remove,
-  control,
-  index,
-  id,
-  watch,
-  setValue,
-  errors,
-}) => {
+const AddExperience = ({ remove, control, index, watch, setValue, errors }) => {
   return (
     <Box
       width={1}
@@ -126,7 +118,7 @@ const AddExperience = ({
         </Typography>
       </Box>
 
-      <Button onClick={() => remove(id)} color="error" fullWidth>
+      <Button onClick={() => remove(index)} color="error" fullWidth>
         Remove
       </Button>
     </Box>

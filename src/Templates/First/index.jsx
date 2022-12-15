@@ -54,7 +54,12 @@ const First = () => {
         >
           <img src={photo} />
         </Box>
-        <Typography variant="large" fontWeight="bold" textTransform="uppercase">
+        <Typography
+          variant="large"
+          fontWeight="bold"
+          textAlign="center"
+          textTransform="uppercase"
+        >
           {name}
         </Typography>
         <Typography

@@ -5,15 +5,7 @@ import Input from "../Input";
 import { Box, TextField, Button } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers";
 
-const EditProject = ({
-  remove,
-  id,
-  index,
-  control,
-  watch,
-  setValue,
-  errors,
-}) => {
+const EditProject = ({ remove, index, control, watch, setValue, errors }) => {
   return (
     <Box
       sx={{ "& .MuiFormControl-root": { my: 1 } }}
@@ -66,7 +58,7 @@ const EditProject = ({
           />
         )}
       />
-      <Button onClick={() => remove(id)} color="error" sx={{ width: 1 }}>
+      <Button onClick={() => remove(index)} color="error" sx={{ width: 1 }}>
         Remove
       </Button>
     </Box>

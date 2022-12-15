@@ -245,7 +245,6 @@ const Index = () => {
             key={id}
             control={control}
             index={index}
-            id={id}
             watch={watch}
             setValue={setValue}
             errors={errors}
@@ -264,7 +263,6 @@ const Index = () => {
             remove={removeExperience}
             control={control}
             index={index}
-            id={id}
             watch={watch}
             setValue={setValue}
             errors={errors}
@@ -279,7 +277,6 @@ const Index = () => {
         {skills.map(({ id }, index) => (
           <EditSkill
             key={id}
-            id={id}
             index={index}
             control={control}
             setValue={setValue}
@@ -301,7 +298,6 @@ const Index = () => {
           <EditProject
             key={id}
             remove={removeProject}
-            id={id}
             index={index}
             control={control}
             watch={watch}
@@ -319,7 +315,6 @@ const Index = () => {
         {socials.map(({ id }, index) => (
           <EditSocial
             key={id}
-            id={id}
             index={index}
             remove={removeSocial}
             watch={watch}
@@ -343,7 +338,6 @@ const Index = () => {
         {interests.map(({ id }, index) => (
           <EditInterest
             key={id}
-            id={id}
             index={index}
             remove={removeInterest}
             watch={watch}
